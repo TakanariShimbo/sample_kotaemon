@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  kotaemon:
+    image: ghcr.io/cinnamon/kotaemon:main-full
+    ports:
+      - "${GRADIO_SERVER_PORT_HOST}:${GRADIO_SERVER_PORT}"
+    env_file:
+      - .env
+    restart: always
